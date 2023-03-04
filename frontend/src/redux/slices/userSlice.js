@@ -1,16 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { loginThunk, logOutThunk, registerThunk, routineThunk } from "../thunk/userThunk";
+import { assignTaskAPI } from "../../APIlinks";
+import { loginThunk, logOutThunk, markAllThunk, markThunk, registerThunk, routineThunk } from "../thunk/userThunk";
 const userSlice = createSlice({
     name: "user",
     initialState: {
-        userLoading: false,
-        isAuthenticated: false,
+        loading: false,
+        isAuthenticated: undefined,
         userInfo: null,
         error: null,
     },
     reducers: {
         clearErrors: (state) => {
             state.error = null;
+        },
+        setUser: (state, { payload }) => {
+            state.userInfo = payload
         }
     },
     extraReducers: (builder) => {
@@ -63,7 +67,6 @@ const userSlice = createSlice({
             state.error = action.payload;
         });
 
-        //logout thunk
         builder.addCase(routineThunk.pending, (state, action) => {
         });
         builder.addCase(routineThunk.fulfilled, (state, action) => {
@@ -75,10 +78,34 @@ const userSlice = createSlice({
             state.error = action.payload;
             state.userInfo = null;
         });
+
+        builder.addCase(markThunk.pending, (state, action) => {
+            state.loading = true
+        });
+        builder.addCase(markThunk.fulfilled, (state, action) => {
+            state.loading = false
+            state.userInfo = action.payload;
+        });
+        builder.addCase(markThunk.rejected, (state, action) => {
+            state.loading = false
+            state.error = action.payload;
+        });
+
+        builder.addCase(markAllThunk.pending, (state, action) => {
+            state.loading = true
+        });
+        builder.addCase(markAllThunk.fulfilled, (state, action) => {
+            state.loading = false
+            state.userInfo = action.payload;
+        });
+        builder.addCase(markAllThunk.rejected, (state, action) => {
+            state.loading = false
+            state.error = action.payload;
+        });
     }
 })
 
-export const { clearErrors } =
+export const { clearErrors,setUser } =
     userSlice.actions;
 
 export default userSlice.reducer;

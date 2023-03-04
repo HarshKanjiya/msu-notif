@@ -9,10 +9,12 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import { changeScreen } from '../../../redux/slices/nativeSlice';
 import { Badge } from '@mui/material';
 import { logOutThunk } from '../../../redux/thunk/userThunk';
+import { useNavigate } from 'react-router-dom';
 
 const SideBar = () => {
     const dispatch = useDispatch()
-    const { userInfo } = useSelector((state) => state.user)
+    const navigate = useNavigate()
+    const { userInfo, isAuthenticated } = useSelector((state) => state.user)
 
     return (
         <Wrapper>
@@ -33,7 +35,10 @@ const SideBar = () => {
                 }
             </div>
             <div>
-                <IconButton aria-label="log out" onClick={() => { dispatch(logOutThunk({})) }} >
+                <IconButton aria-label="log out" onClick={() => {
+                    dispatch(logOutThunk({}))
+                    navigate('/login')
+                }} >
                     <LogoutIcon />
                 </IconButton>
             </div>
@@ -64,5 +69,9 @@ div{
     flex-direction: column;
     align-items: center;
     gap:2rem;
+}
+
+@media (max-width:480px){
+    width: 3.4rem;
 }
 `

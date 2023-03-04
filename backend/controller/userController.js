@@ -127,3 +127,89 @@ exports.userDetails = catchAsyncErrors(async (req, res, next) => {
         user,
     });
 });
+
+exports.getAdminUsers = catchAsyncErrors(async (req, res, next) => {
+
+    const users = await User.find()
+
+    res.status(200).json({
+        success: true,
+        users
+    })
+});
+
+exports.assignTask = catchAsyncErrors(async (req, res, next) => {
+
+    const { userIDs, message, subject,userID } = req.body;
+
+    userIDs.map(async (id) => {
+        const user = await User.findById(id)
+        user.notifs = [...user.notifs, { message: message, subject: subject }]
+        // await User.findByIdAndUpdate({ id }, notif)
+        await user.save()
+    })
+
+    const users = await User.find()
+
+    const user = await User.findById(userID)
+
+    res.status(200).json({
+        success: true,
+        users,
+        user
+    })
+});
+
+exports.markAsRead = catchAsyncErrors(async (req, res, next) => {
+
+    const { subject, message, userID, notifID, seen } = req.body;
+
+    console.log('req.body :>> ', req.body);
+
+    const user = await User.findById(userID)
+
+    if (!user) {
+        return next(new ErrorHandler("invalid Email or Password", 401));
+    }
+
+    if (seen) {
+        user.notifs.map((x) => {
+
+            if (String(x._id).includes(notifID)) {
+                x.seen = true
+            }
+        })
+    }
+    if (!seen) {
+        user.notifs.map((x) => {
+            if (String(x._id).includes(notifID)) {
+                x.seen = false
+            }
+        })
+    }
+
+    await user.save()
+
+    res.status(200).json({
+        success: true,
+        user
+    })
+});
+
+exports.markall = catchAsyncErrors(async (req, res, next) => {
+
+    const { userID, seen } = req.body;
+
+    const user = await User.findById(userID);
+
+    user.notifs.map((x) => {
+        x.seen = seen
+    })
+
+    await user.save()
+
+    res.status(200).json({
+        success: true,
+        user
+    })
+});

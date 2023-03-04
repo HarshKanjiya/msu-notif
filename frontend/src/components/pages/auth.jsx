@@ -6,10 +6,14 @@ import { AnimatePresence } from "framer-motion"
 import { useDispatch, useSelector } from 'react-redux'
 import { Alert } from '../components/Alert'
 import { clearErrors } from '../../redux/slices/userSlice'
+import { useNavigate } from "react-router-dom"
+
+
 const Auth = () => {
     const [screen, setScreen] = useState('login')
     const { userInfo, loading, error } = useSelector((state => state.user))
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (error && error !== "err123") {

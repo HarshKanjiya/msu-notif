@@ -36,7 +36,7 @@ const SignUpScreen = ({ screen, setScreen }) => {
                   type="text"
                   value={name}
                   onChange={(e) => { setName(e.target.value) }}
-                  placeholder="Email"
+                  placeholder="name"
                 />
                 <TextF
                   type="email"
@@ -63,7 +63,7 @@ const SignUpScreen = ({ screen, setScreen }) => {
                 </div>
               </Body>
               <Footer>
-                <Btn>SIGN UP</Btn>
+                <Btn onClick={HelperSubmit} >SIGN UP</Btn>
 
                 <div>
                   <p>Already have an Account ? <button className='btnn' onClick={() => { setScreen('login') }} >LOG IN</button></p>

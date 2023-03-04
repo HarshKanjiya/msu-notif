@@ -28,6 +28,9 @@ const userSchema = new mongoose.Schema({
         default: "user",
     },
     notifs: [{
+        subject: {
+            type: String
+        },
         message: {
             type: String,
             required: true
