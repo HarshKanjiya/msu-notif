@@ -1,24 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import HomePage from './components/pages/HomePage'
+import Auth from './components/pages/auth'
+import { Provider, useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { routineThunk } from './redux/thunk/userThunk'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(routineThunk({}))
+  }, [])
 
   return (
     <div className="App">
-      <BrowserRouter>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' exact element={<HomePage />} />
+            <Route path='/login' element={<Auth />} />
 
-        <Routes>
-          <Route path='/' exact element={<HomePage />} />
-          <Route path='/login'  element={<HomePage />} />
-
-        </Routes>
-
-
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
     </div>
   )
 }

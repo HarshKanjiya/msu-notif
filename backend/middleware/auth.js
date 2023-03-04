@@ -25,7 +25,7 @@ exports.forRoutineCheck = catchAsyncError(async (req, res, next) => {
   // console.log('token :>> ', token);
 
   if (!token) {
-    return next(new ErrorHandler("routine123", 401))
+    return next(new ErrorHandler("err123", 401))
   }
   const decodedData = jwt.verify(token, process.env.JWT_SECRET_KEY);
 

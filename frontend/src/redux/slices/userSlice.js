@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { loginThunk, logOutThunk, registerThunk } from "../thunk/userThunk";
+import { loginThunk, logOutThunk, registerThunk, routineThunk } from "../thunk/userThunk";
 const userSlice = createSlice({
     name: "user",
     initialState: {
@@ -62,5 +62,23 @@ const userSlice = createSlice({
             state.loading = false;
             state.error = action.payload;
         });
+
+        //logout thunk
+        builder.addCase(routineThunk.pending, (state, action) => {
+        });
+        builder.addCase(routineThunk.fulfilled, (state, action) => {
+            state.isAuthenticated = false;
+            state.userInfo = null;
+        });
+        builder.addCase(routineThunk.rejected, (state, action) => {
+            state.isAuthenticated = false;
+            state.error = action.payload;
+            state.userInfo = null;
+        });
     }
 })
+
+export const { clearErrors } =
+    userSlice.actions;
+
+export default userSlice.reducer;
