@@ -2,7 +2,7 @@ repo_name: HarshKanjiya/msu-notif
 report_id: edcf7ef0f305b8198d166581486c7649
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:20:45+00:00'
+timestamp: '2024-02-29T19:06:45+00:00'
 requested_by: HarshKanjiya
 provider: github
 branch: master
@@ -396,6 +396,13 @@ tools:
   last_updated_by: Harsh Kanjiya
   last_updated_on: 2023-03-03 09:29:41.000000000 Z
   vulnerabilities:
+  - name: Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive
+      filesystem
+    cve_id: CVE-2024-23331
+    cve_url: https://github.com/advisories/GHSA-c24v-8rfc-w8vw
+    detected_date: Jan 20
+    severity: high
+    first_patched: 4.5.2
   - name: Vite Server Options (server.fs.deny) can be bypassed using double forward-slash
       (//)
     cve_id: CVE-2023-34092
