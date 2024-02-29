@@ -3,17 +3,17 @@
 ## Tech Stack
 HarshKanjiya/msu-notif is built on the following main stack:
 
-- [React](https://reactjs.org/) – Javascript UI Libraries
-- [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- [Mongoose](http://mongoosejs.com/) – Object Document Mapper (ODM)
-- [Nodemailer](http://www.nodemailer.com/) – Transactional Email
+- [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
+- [React](https://reactjs.org/) – Javascript UI Libraries
 - [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
 - [Redux](https://redux.js.org/) – State Management Library
-- [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
-- [nodemon](http://nodemon.io/) – node.js Application Monitoring
-- [SweetAlert](https://sweetalert.js.org/) – Javascript Utilities & Libraries
+- [Mongoose](http://mongoosejs.com/) – Object Document Mapper (ODM)
 - [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
+- [nodemon](http://nodemon.io/) – node.js Application Monitoring
+- [Nodemailer](http://www.nodemailer.com/) – Transactional Email
+- [SweetAlert](https://sweetalert.js.org/) – Javascript Utilities & Libraries
+- [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
 
@@ -23,17 +23,17 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 HarshKanjiya/msu-notif is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/1163/hashtag.png' alt='ExpressJS'/> [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg' alt='Mongoose'/> [Mongoose](http://mongoosejs.com/) – Object Document Mapper (ODM)
-- <img width='25' height='25' src='https://img.stackshare.io/service/2862/qr2-jCLr.jpg' alt='Nodemailer'/> [Nodemailer](http://www.nodemailer.com/) – Transactional Email
+- <img width='25' height='25' src='https://img.stackshare.io/service/1163/hashtag.png' alt='ExpressJS'/> [ExpressJS](http://expressjs.com/) – Microframeworks (Backend)
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/3350/8261421.png' alt='React Router'/> [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
 - <img width='25' height='25' src='https://img.stackshare.io/service/4074/13142323.png' alt='Redux'/> [Redux](https://redux.js.org/) – State Management Library
-- <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/5577/preview.png' alt='nodemon'/> [nodemon](http://nodemon.io/) – node.js Application Monitoring
-- <img width='25' height='25' src='https://ucarecdn.com/c4c55828-7bcf-4661-8f4f-52745636aafd/' alt='SweetAlert'/> [SweetAlert](https://sweetalert.js.org/) – Javascript Utilities & Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg' alt='Mongoose'/> [Mongoose](http://mongoosejs.com/) – Object Document Mapper (ODM)
 - <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
+- <img width='25' height='25' src='https://img.stackshare.io/service/5577/preview.png' alt='nodemon'/> [nodemon](http://nodemon.io/) – node.js Application Monitoring
+- <img width='25' height='25' src='https://img.stackshare.io/service/2862/qr2-jCLr.jpg' alt='Nodemailer'/> [Nodemailer](http://www.nodemailer.com/) – Transactional Email
+- <img width='25' height='25' src='https://ucarecdn.com/c4c55828-7bcf-4661-8f4f-52745636aafd/' alt='SweetAlert'/> [SweetAlert](https://sweetalert.js.org/) – Javascript Utilities & Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
 
@@ -44,7 +44,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [HarshKanjiya/msu-notif](https://github.com/HarshKanjiya/msu-notif)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|29<br/>Tools used|01/05/24 <br/>Report generated|
+|29<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -213,7 +213,7 @@ Full tech stack [here](/techstack.md)
 |[react-redux](https://www.npmjs.com/react-redux)|v8.0.5|03/04/23|Harsh Kanjiya |MIT|N/A|
 |[react-router-dom](https://www.npmjs.com/react-router-dom)|v6.8.2|03/04/23|Harsh Kanjiya |MIT|N/A|
 |[validator](https://www.npmjs.com/validator)|v13.9.0|03/03/23|Harsh Kanjiya |MIT|N/A|
-|[vite](https://www.npmjs.com/vite)|v4.1.4|03/03/23|Harsh Kanjiya |N/A|[CVE-2023-34092](https://github.com/advisories/GHSA-353f-5xf4-qw67) (High)|
+|[vite](https://www.npmjs.com/vite)|v4.1.4|03/03/23|Harsh Kanjiya |N/A|[CVE-2024-23331](https://github.com/advisories/GHSA-c24v-8rfc-w8vw) (High)<br/>[CVE-2023-34092](https://github.com/advisories/GHSA-353f-5xf4-qw67) (High)|
 
 <br/>
 <div align='center'>
